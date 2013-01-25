@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install PUBLIC "-//Joomla! 1.5//DTD template 1.0//EN" "http://dev.joomla.org/xml/1.5/template-install.dtd">
+<install version="2.5" type="template">
+<name>MMY</name>
+<creationDate>25/01/2009</creationDate>
+<author>MITUL SHAH</author>
+<authorEmail>mitul@yahoo.com</authorEmail>
+<authorUrl>http://tobacamp.com</authorUrl>
+<copyright></copyright>
+<license>GNU/GPL</license>
+<version>1.0.0</version>
+<description>template description goes here</description>
+<files>
+		<filename>index.php</filename>
+		<filename>templateDetails.xml</filename>
+		<filename>index.html</filename>
+		<filename>about.html</filename>
+		<folder>css</folder>
+		<folder>fonts</folder>
+		<folder>images</folder>
+		<filename>css/style.css</filename>
+</files>
+<positions>
+		<position>position-0</position>
+		<position>position-1</position>
+		<position>position-2</position>
+		<position>position-3</position>
+		<position>position-4</position>
+		<position>position-5</position>
+		<position>position-6</position>
+		<position>position-7</position>
+		<position>position-8</position>
+		<position>position-9</position>
+		<position>position-10</position>
+		<position>position-11</position>
+		<position>position-12</position>
+		<position>position-13</position>
+		<position>position-14</position>
+</positions>
+</install>
