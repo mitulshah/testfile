@@ -1,0 +1,382 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Sausti</title>
+<link href="style.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="css/craftyslide.css" />
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<!--<script type="text/javascript" >
+$(document).ready(function()
+{
+$(".account").click(function()
+{
+var X=$(this).attr('id');
+
+if(X==1)
+{
+$(".submenu").hide();
+$(this).attr('id', '0');	
+}
+else
+{
+
+$(".submenu").show();
+$(this).attr('id', '1');
+}
+	
+});
+
+//Mouseup textarea false
+$(".submenu").mouseup(function()
+{
+return false
+});
+$(".account").mouseup(function()
+{
+return false
+});
+
+
+//Textarea without editing.
+$(document).mouseup(function()
+{
+$(".submenu").hide();
+$(".account").attr('id', '');
+});
+	
+});
+	
+	</script>
+-->    
+<script type="text/javascript">
+$(document).ready(function(){
+	var flag = 0;
+$('.account1').toggle(
+function(){
+	if(flag == 1){
+		$('.account2').click();
+	} 
+ 	jQuery('.submenu2').animate({"right": "-=0px"}, "4000");
+	jQuery('.submenu2').css({display: 'none'});
+	  jQuery('.submenu1').css({display: 'block'});
+	  $(this).animate({"right": "+=0px"}, "2000");
+	  jQuery('.submenu1').animate({"right": "+=0px"}, "2000");
+	  $('.account1').addClass("location-active1");
+	  flag = 1;
+   },
+function(){ 
+	if(flag == 1){
+		//$('.account2').click();
+	} 
+ 	jQuery('.submenu1').animate({"right": "-=0px"}, "4000");
+    $(this).animate({"right": "-=0px"}, "4000");
+	jQuery('.submenu1').css({display: 'none'});
+	$('.account1').removeClass("location-active1");
+	flag = 0;
+   }
+   );
+   
+$('.account2').toggle(
+function(){ 
+	if(flag == 1){
+		$('.account1').click();
+	} 
+ 	jQuery('.submenu1').animate({"right": "-=0px"}, "4000");
+    $(this).animate({"right": "-=0px"}, "4000");
+	jQuery('.submenu1').css({display: 'none'});
+	  jQuery('.submenu2').css({display: 'block'});
+	  jQuery('.submenu2').animate({"right": "+=0px"}, "2000");
+	  $('.account2').addClass("location-active2");
+	  flag = 1;
+   },
+function(){ 
+	if(flag == 1){
+		
+	} 
+ 	jQuery('.submenu2').animate({"right": "-=0px"}, "4000");
+    $(this);
+	jQuery('.submenu2').css({display: 'none'});
+	$('.account2').removeClass("location-active2");
+	flag = 0;
+   }
+   );
+
+});
+</script>
+
+</head>
+
+<body>
+
+	<!--wrapper-->
+    <div class="wrapper">
+    	<!--header-->
+        <div class="header">
+        	<!--logo-->
+            <div class="logo">
+            	<a href="index.html">
+                	<img src="images/logo-s.png" alt="logo" />
+                </a>
+            </div>
+            <!--logo-->
+            
+            <!--buttons-->
+            <div class="buttons">
+                	
+                    
+                    <div class="dropdown">
+                    <a class="account1" >
+                    <span class="location1">patient login</span>
+                    </a>
+                    <div class="submenu1" style="display: none; ">
+                    <input type="text" value="please enter your patient id" class="box" style="width:169px; height:14px;"/> 
+                    <input type="text" value="password" class="box" style="width:169px; height:14px;"/>          
+
+                    <div class="send">login</div>
+
+                	<p style="margin:15px 0 0 0; float:right; color:#009bc9; font-size:12px; font-family:Arial, Helvetica, sans-serif;">
+                    <a href="#" style="float:right; color:#009bc9; font-size:12px; font-family:Arial, Helvetica, sans-serif;">forgot your password?</a></p>
+                    </div>
+                    </div>
+                    
+                    
+                    
+                    <div class="dropdown">
+                    <a class="account2" >
+                    <span class="location2">request an appointment</span>
+                    </a>
+                    <div class="submenu2" style="display: none; ">
+                
+                        <!--request-->
+                        <div class="request">
+                            
+                            <!--new-->
+                            <div class="new">  
+                                <div class="new-title">
+                                    <img src="images/yellow.png" alt="new" style="margin-right:5px;"/>exisiting patient
+                                </div>
+                                <input type="text" value="patient id. no." class="small-box"/>           
+                                <div class="request-drop">
+                                    <select class="request-drop2">
+                                        <option>*preffered date</option>
+                                        <option>*preffered date</option>
+                                        <option>*preffered date</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="request-drop">
+                                    <select class="request-drop2">
+                                        <option>department</option>
+                                        <option>department</option>
+                                        <option>department</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="send">send your request</div>
+                            </div>
+                            <!--new-->
+                            
+                            <!--new-->
+                            <div class="new2">  
+                                <div class="new-title" style="opacity:0.5;">
+                                    <img src="images/blue.png" alt="new" style="margin-right:5px;"/>new patient
+                                </div>
+            
+                                <div class="request-drop">
+                                    <select class="request-drop2">
+                                        <option>clinic location</option>
+                                        <option>clinic location</option>
+                                        <option>clinic location</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="request-drop">
+                                    <select class="request-drop2">
+                                        <option>*preffered time</option>
+                                        <option>*preffered time</option>
+                                        <option>*preffered time</option>
+                                    </select>
+                                </div>
+                                                    
+                                <div class="request-drop">
+                                    <select class="request-drop2">
+                                        <option>*preffered doctor</option>
+                                        <option>*preffered doctor</option>
+                                        <option>*preffered doctor</option>
+                                    </select>
+                                </div>
+                               
+                            </div>
+                            <!--new-->
+                            
+                            <div class="clr"></div>
+                            
+                            <p style="margin:10px 0 0 0;">*appointment is subject to availability</p>
+                        </div>
+                        <!--request-->
+                    </div>
+                    </div>
+                
+                <div class="location">locations</div>
+            </div>
+               
+            <!--buttons-->
+            
+            <div class="clr"></div>
+            
+            <!--navigation-->
+            <div class="nav">
+            	<ul>
+                	<li><a href="index.html">home</a></li>
+                    <li><a href="about.html">suasti</a></li>
+                    <li><a href="#.html" class="active">services</a></li>
+                    
+                    <li><a href="#.html">educational resources</a></li>
+                    <li><a href="camps-events.html">camps & events</a></li>
+                    <li><a href="in_the_news.html">in the news</a></li>
+                    <li><a href="career at suasti.html">careers</a></li>
+                    <li><a href="contact.html">contact us</a></li>
+                </ul>
+            </div>
+            <!--navigation-->
+        </div>
+        <!--header-->
+        
+        <div class="clr"></div>
+        
+        <!--content-->
+        <div class="content">
+			
+            <div class="in-the-news">	
+	        
+            	<div class="menu-title">services</div>
+                	<div class="services-main">
+                    	
+                        <ul class="services-menu">
+                
+	           					<li id="service-imgage1"><a href="services-physician.html">FAMILY PHYSICIAN</a></li>
+			                    <li id="service-imgage2"><a href="services-PHYSIOTHERAPIST.html" class="service-imgage2-active">PHYSIOTHERAPIST</a></li>
+                    			<li id="service-imgage3"><a href="#">GYNAECOLOGIST</a></li>
+                    			
+                                <li id="service-imgage4"><a href="#">PAEDUATRICIAN</a></li>
+                    			<li id="service-imgage5"><a href="#">BLOOD COLLECTION</a></li>
+                    			<li id="service-imgage6"><a href="#">SUASTI ONLINE</a></li>
+                   
+                    	</ul>
+        			
+                        
+                        
+                   		<div class="service-des">
+                        			<div class="des-image"> <img src="images/services-physiotherapist-02.png" /></div>
+                        			<div class="services-description">
+                                    		<div class="description-head">physiotherapist</div>
+                                    		<div class="description-des">Did you know that india only has 6 month physicians per 1000 citizens as compared ti and intrnational average of 12? Further, we are becoming the lifestyle disease capital of the word. Most number of deabetics live in india. These diseases need to be prevented rather than managed and almost 80% of them can be under the supervision of  a good family docotor. For a nation to have a good healthecare system. we need to have strong foundation in our primary healthcare system. we need to strong foundations in our primary healthcare infrastructure. This is what aim to do.
+</div>
+		                                   <div class="family-phy">family physician suasti</div> 
+                                    </div>
+                        </div>     	
+            	            
+            
+					</div>            
+            
+			
+            
+            
+            </div>
+                        
+            <div class="line"></div>
+            
+            <!--testimonials-->
+            <div class="testimonials">
+            
+             <!-- End outer wrapper -->
+          
+          <!-- attach the plug-in to the slider parent element and adjust the settings as required -->
+          <div id="slideshow">
+        <ul>
+          <li>
+             		what our patients say
+                <p style="font-size:16px; color:#666; margin:10px 0; font-family:Arial, Helvetica, sans-serif;">
+                	“lorem ipsum dolor sit amet, consectetur adipiscing elit. duis ultricies imperdiet pharetra. curabitur aliquamamet. ultricies imperdiet pharetra. curabitur aliquamamet.”</p>
+                <p style="font-size:13px; line-height:15px; color:#009bc9; font-family:Arial, Helvetica, sans-serif;">rakesh kumar <br />navi mumbai
+                </p> 
+          </li>
+          
+          <li>
+             what our patients say
+                <p style="font-size:16px; color:#666; margin:10px 0; font-family:Arial, Helvetica, sans-serif;">
+                	“lorem ipsum dolor sit amet, consectetur adipiscing elit. duis ultricies imperdiet pharetra. curabitur aliquamamet. ultricies imperdiet pharetra. ”</p>
+                <p style="font-size:13px; line-height:15px; color:#009bc9; font-family:Arial, Helvetica, sans-serif;">rakesh kumar <br />navi mumbai
+                </p>
+          </li>
+          
+          <li>           
+             what our patients say
+                <p style="font-size:16px; color:#666; margin:10px 0; font-family:Arial, Helvetica, sans-serif;">
+                	“lorem ipsum dolor sit amet, elit. duis ultricies imperdiet pharetra. curabitur aliquamamet. ultricies imperdiet pharetra. curabitur aliquamamet.”</p>
+                <p style="font-size:13px; line-height:15px; color:#009bc9; font-family:Arial, Helvetica, sans-serif;">rakesh kumar <br />navi mumbai
+                </p>
+          </li>
+          
+          <li>           
+             what our patients say
+                <p style="font-size:16px; color:#666; margin:10px 0; font-family:Arial, Helvetica, sans-serif;">
+                	“lorem ipsum dolor sit amet, consectetur  ultricies imperdiet pharetra. curabitur aliquamamet. ultricies imperdiet pharetra. curabitur aliquamamet.”</p>
+                <p style="font-size:13px; line-height:15px; color:#009bc9; font-family:Arial, Helvetica, sans-serif;">rakesh kumar <br />navi mumbai
+                </p>
+          </li>
+          
+          <li>           
+             what our patients say
+                <p style="font-size:16px; color:#666; margin:10px 0; font-family:Arial, Helvetica, sans-serif;">
+                	“lorem ipsum dolor sit amet, consectetur adipiscing elit. duis ultricies . curabitur aliquamamet. ultricies imperdiet pharetra. curabitur aliquamamet.”</p>
+                <p style="font-size:13px; line-height:15px; color:#009bc9; font-family:Arial, Helvetica, sans-serif;">rakesh kumar <br />navi mumbai
+                </p>
+          </li>	                         
+        </ul>
+      </div>   
+      
+      <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+      <script src="js/craftyslide.min.js"></script>
+      
+      <script>
+        $("#slideshow").craftyslide();
+      </script>
+
+        </div>
+            
+            <!--	what our patients say
+                <p style="font-size:16px; color:#666; margin:10px 0; font-family:Arial, Helvetica, sans-serif;">
+                	“lorem ipsum dolor sit amet, consectetur adipiscing elit. duis ultricies imperdiet pharetra. curabitur aliquamamet. ultricies imperdiet pharetra. curabitur aliquamamet.”
+                </p>
+                
+                                <p style="font-size:13px; color:#009bc9; margin:10px 0; font-family:Arial, Helvetica, sans-serif;">rakesh kumar <br />navi mumbai
+                </p> -->
+       </div> 
+            <!--testimonials-->
+            
+            <div class="line"></div>
+        
+        <!--content-->
+        
+        <!--footer-->
+        <div class="footer">
+        	     <ul>
+                	<li><a href="index.html" class="active">home</a></li>
+                    <li><a href="#.html">faqs</a></li>
+                    <li><a href="#.html">sitemap</a></li>
+                    <li><a href="#.html">contact</a></li>
+                    <li><a href="#.html">privacy policy</a></li>
+                    <li><a href="#.html" style="border:none;">disclaimer</a></li>
+                </ul>
+                
+                <p style="float:right;  font-size:13px; text-align:right; font-family:Arial, Helvetica, sans-serif; color:#999;">suasti family medical centre - © 2012 <br /> <img src="images/mimansa.png" alt="mimansa" style="float:right; margin-top:10px;"/></p>
+        </div>
+        <!--footer-->
+    </div>
+    
+    <!--wrapper-->
+
+</body>
+</html>

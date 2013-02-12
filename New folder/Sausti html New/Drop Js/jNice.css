@@ -1,0 +1,48 @@
+.jNiceWrapper select {border:none;margin:0;padding:0;}
+
+.jNiceSelectWrapper {
+	height: 20px; 
+	left:0px;top:0px;position:absolute;
+}
+
+.jNiceWrapper iframe {position:absolute;z-index:1;width:100%;left:0px;top:0px;}
+
+.jNiceSelectWrapper .jNiceSelectText {
+	height: 15px;
+	line-height: 15px;
+	padding: 4px 10px;
+	border: 1px solid #CCCCCC;
+	border-radius:25px;
+	background-color: #FFF;
+	overflow:hidden;float:none;position:absolute;
+}
+
+.jNiceSelectWrapper .jNiceSelectOpen {
+	width: 21px;
+	height: 17px;
+	background: url(/jquery/jnice/elements/select_right.gif) no-repeat center center;
+	z-index:99999999;display:block;position:absolute;right:0px;
+}
+
+.jNiceSelectWrapper ul {
+	top: 24px;
+	background-color: #FFF;
+	border: solid 1px #CCC;
+	height: 100px;
+	position:absolute;left:0px;list-style:none;display: none;margin:0;padding:0;overflow-y:auto;z-index:1000;width: 100%;
+}
+
+.jNiceSelectWrapper ul a {
+	color:#0099CC;
+	background-color: #FFF;
+	display:block;padding:5px;text-decoration:none;
+}
+
+.jNiceSelectWrapper ul a:hover { background:#E1F5FF; }
+.jNiceSelectWrapper ul a.selected {background: #EDEDED;}
+
+.jNiceFocus { border: dotted 1px #666666; }
+
+.jNiceHidden {opacity:0;z-index:-1;position:relative;}
+.jNiceWrapper {position:relative;vertical-align:top;}
+.jNiceWrapper input {outline:none;moz-outline:none;}
