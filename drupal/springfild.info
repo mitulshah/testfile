@@ -1,0 +1,13 @@
+name = springfild
+description = Welcome to SpringFild
+core = 7.x
+engine = phptemplate
+stylesheets[all][] = style.css
+
+
+regions[left] = Left sidebar
+regions[right] = Right sidebar
+regions[content] = Content
+regions[header] = Header
+regions[footer] = Footer
+regions[logo] = Logo
